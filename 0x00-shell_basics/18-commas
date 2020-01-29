@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -aX1 {,}
+ls -avmp
