@@ -1,2 +1,2 @@
-#!/bin/bash
-cd /home/vagrant/holberton-system_engineering-devops/0x00-shell_basics
+#!interpreter /bin/bash
+pwd /home/vagrant/holberton-system_engineering-devops/0x00-shell_basics
