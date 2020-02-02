@@ -1,2 +1,2 @@
 #!/bi/bash
-ls -dR|wc -l
+find -type -d|wc -l
