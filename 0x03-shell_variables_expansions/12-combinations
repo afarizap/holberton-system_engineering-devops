@@ -1,0 +1,2 @@
+#!/bin/bash
+echo {a..z..1}{a..z..1}|tr " " "\n"|grep -v "oo"
