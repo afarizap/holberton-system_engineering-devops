@@ -2,7 +2,7 @@
 # displays time for 12 hours and 59 min
 x=1
 y=0
-while [ $y -lt 12 ]
+while [ $y -le 12 ]
 do
     echo "Hour: $y"
     y=$(( y + 1 ))
