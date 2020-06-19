@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# displays pwd in a formated list , only name after -
+for i in *
+do
+    [[ -e "$i" ]]
+    echo "$i" | cut -d "-" -f 2
+done

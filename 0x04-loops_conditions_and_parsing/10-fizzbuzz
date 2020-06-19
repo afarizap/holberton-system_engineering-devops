@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# FIZZBUZZ - displays numbers from 1 to 100
+while 
