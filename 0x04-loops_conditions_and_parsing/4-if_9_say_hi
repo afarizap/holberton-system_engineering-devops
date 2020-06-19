@@ -3,11 +3,10 @@
 x=0
 while [ $x -lt 10 ]
 do
+    echo "Holberton School"
     if [ $x = 8 ]
     then
 	echo "Hi"
-    else
-	echo "Holberton School"
     fi
     x=$(( x + 1))
 done
