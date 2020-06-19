@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# displays "Holberton School" 10 times but hi at 9 using for while
+x=0
+while [ $x -lt 10 ]
+do
+    if [ $x = 8 ]
+    then
+	echo "Hi"
+    else
+	echo "Holberton School"
+    fi
+    x=$(( x + 1))
+done

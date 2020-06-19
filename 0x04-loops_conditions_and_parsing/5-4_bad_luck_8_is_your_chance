@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# displays "Holberton School" but 4th and 8th bad/good luck
+x=1
+while [ $x -lt 11 ]
+do
+    if [ $x = 8 ]
+    then
+	echo "good luck"
+    elif [ $x = 4 ]
+    then
+	echo "bad luck"
+    else
+	echo "Holberton School"
+    fi
+    x=$(( x + 1))
+done
