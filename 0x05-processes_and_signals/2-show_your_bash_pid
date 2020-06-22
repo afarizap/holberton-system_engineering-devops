@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # displays a list of currently running processes (Real user id)
 # shellcheck disable=SC2009
-ps -C bash uf
+ps -u root ufa | grep bash
