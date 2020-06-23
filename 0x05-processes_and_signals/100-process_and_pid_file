@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
 # displays To ifinity and beyond indefinitely
-echo $$ > /var/run/holbertonscript.pid
+echo $$ > /tmp/holbertonscript.pid
 trap "echo I hate the kill command" TERM
 trap "echo Y U no love me?!" INT
-trap "{ rm /var/run/holbertonscript.pid ; exit 0 }" TERM QUIT
+trap elephant QUIT TERM
+elephant()
+{
+    rm -rf /var/run/holbertonscript.pid
+    exit 1
+}
+
 while :
 do
     echo To infinity and beyond
