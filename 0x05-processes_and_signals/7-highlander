@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# displays To ifinity and beyond indefinitely
+trap "echo I am invincible!!!" TERM
+while :
+do
+    echo To infinity and beyond
+    sleep 2
+done
