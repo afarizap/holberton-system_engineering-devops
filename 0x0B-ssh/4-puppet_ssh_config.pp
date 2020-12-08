@@ -6,5 +6,5 @@ file { 'Turn off passwd auth':
 }
 file { 'Declare identity file':
   path => '/etc/ssh/ssh_config',
-  content => '~/.ssh/holberton',
+  content => 'IdentityFile ~/.ssh/holberton',
 }
