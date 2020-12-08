@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# creates an RSA key pair with name holberton, key betty and 4096 bits
