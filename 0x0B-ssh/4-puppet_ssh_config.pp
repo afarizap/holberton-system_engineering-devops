@@ -1,10 +1,10 @@
 # set up your client SSH configuration file so that you can connect to a server
 # without typing a password.
-file { 'Turn off passwd auth':
-    path => '/etc/ssh/ssh_config',
-    content => 'BachMode yes',
+exec { 'Turn off passwd auth':
+    path => '/usr/bin',
+    content => 'echo "BachMode yes" >> /etc/ssh/ssh_config',
 }
-file { 'Declare identity file':
-  path => '/etc/ssh/ssh_config',
-  content => 'IdentityFile ~/.ssh/holberton',
+exec { 'Declare identity file':
+  path => '/usr/bin',
+  content => 'echo "IdentityFile ~/.ssh/holberton" >> /etc/ssh/ssh_config',
 }
