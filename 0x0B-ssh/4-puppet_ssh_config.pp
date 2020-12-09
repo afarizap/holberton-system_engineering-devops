@@ -1,14 +1,10 @@
 # set up your client SSH configuration file so that you can connect to a server
 # without typing a password.
 File_line { 'Turn off passwd auth':
-  ensure => present,
   path   => '/etc/ssh/ssh_config',
   line   => 'BachMode yes',
-  match  => 'BachMode yes',
 }
 File_line { 'Declare identity file':
-  ensure => present,
   path   => '/etc/ssh/ssh_config',
   line   => 'IdentityFile ~/.ssh/holberton',
-  match  => 'IdentityFile ~/.ssh/holberton',
 }
