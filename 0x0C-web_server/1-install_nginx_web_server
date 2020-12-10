@@ -5,4 +5,4 @@
 #sudo mkdir -p /var/www/html
 #sudo chown -R $USER:$USER /var/www/html
 #sudo chmod -R 755 /var/www
-echo "Holberton School" > /var/www/html/index.html
+#echo "Holberton School" > /var/www/html/index.html
