@@ -3,5 +3,5 @@
 apt-get -y update
 apt-get -y install nginx
 echo "Holberton School" > /var/www/html/index.html
-sed -i 's/server_name _;/server_name _;\nrewrite ^\/redirect_me https://twitter.com/ariza_rocks/photo permanent;/' /etc/nginx/sites-avaliable/default
+sed -i '18 a rewrite ^\/redirect_me https://twitter.com/ariza_rocks/photo permanent;' /etc/nginx/sites-enabled/default
 service nginx restart
