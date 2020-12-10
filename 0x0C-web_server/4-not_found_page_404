@@ -5,6 +5,7 @@ apt-get -y install nginx
 echo "Holberton School" > /var/www/html/index.html
 echo "Ceci n'est pas une page" > /var/www/html/error.html
 sudo chmod -R 755 /var/www
+sudo sed -i 's/"listen 80 default_server;"/"\tlisten 80;\n\tlisten [::]:80;"/' /etc/nginx/sites-enabled/default
 sudo sed -i '18 a \\trewrite ^\/redirect_me https://twitter.com/ariza_rocks/photo permanent;' /etc/nginx/sites-enabled/default
 sudo sed -i '19 a \\terror_page 404 /error.html;' /etc/nginx/sites-enabled/default
 sudo service nginx restart
