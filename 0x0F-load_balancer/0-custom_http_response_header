@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# second server config
+#!/usr/bin/env bash
+# second server config
+sudo apt-get update
+sudo apt-get install nginx -y
+sudo chmod -R 775 /var/www
+echo "Holberton School" > /var/www/html/index.html
+echo "Ceci n'est pas une page" > /var/www/html/error.html
+sudo chmod -R 775 /etc/nginx/
+sudo sed -i '18 a \\trewrite ^\/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;' /etc/nginx/sites-enabled/default
+sudo sed -i '19 a \\terror_page 404 /error.html;' /etc/nginx/sites-enabled/default
+sudo sed -i "20 a \\tadd_header X-Served-By $HOSTNAME;" /etc/nginx/sites-enabled/default
+sudo service nginx restart
+# assign static-hostname : change this line 127.0.0.1 localhost persistent-hostname in /etc/hosts then
+# sudo hostnamectl set-hostname persistent-hostname
