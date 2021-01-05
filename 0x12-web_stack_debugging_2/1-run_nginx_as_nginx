@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # the whoami command under the user passed as an argument
-# sed -i '1 a user nginx;' /etc/nginx/nginx.conf
 sed -i 's/80/8080/' /etc/nginx/sites-available/default
 chmod -R 755 /etc/nginx/
 sudo -u nginx service nginx start
