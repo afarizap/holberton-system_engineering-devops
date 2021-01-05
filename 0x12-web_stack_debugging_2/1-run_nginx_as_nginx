@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# the whoami command under the user passed as an argument
+sed -i '1 a user nginx;' /etc/nginx/nginx.conf
+sed -i 's/80/8080/' /etc/nginx/sites-available/default
+pkill apache2
+service nginx start
