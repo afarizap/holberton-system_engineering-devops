@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # the whoami command under the user passed as an argument
+chmod -R 755 /etc/nginx/
 sed -i '1 a user nginx;' /etc/nginx/nginx.conf
 sed -i 's/80/8080/' /etc/nginx/sites-available/default
 pkill apache2
-sudo -u nginx service nginx start
+service nginx start
