@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+# Configure web-01 so that its firewall redirects port 8080/TCP to port 80/TCP
+# add these lines to /etc/ufw/before.rules
+# *nat
+# :PREROUTING ACCEPT [0:0]
+# -A PREROUTING -p tcp --dport exposed_port -j REDIRECT --to-port effective_port
+# COMMIT
+# at the end just run sudo ufw disable and sudo ufw enable
