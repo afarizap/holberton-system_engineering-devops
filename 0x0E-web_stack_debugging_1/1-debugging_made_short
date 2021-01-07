@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # what is listening to port 80
 sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
-service nginx restart
+service nginx stop
