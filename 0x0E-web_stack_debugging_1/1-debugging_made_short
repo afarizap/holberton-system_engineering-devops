@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
-# what is listening to port 80
+# chop master process
 sed -i 's/8080/80/' /etc/nginx/sites-enabled/default
-service nginx stop
+service nginx start
+kill -9 "$(cat /var/run/nginx.pid)"
