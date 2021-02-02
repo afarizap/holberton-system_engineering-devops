@@ -22,8 +22,9 @@ if __name__ == "__main__":
              item.get("completed"),
              item.get("title")]
         )
-
-    with open("{}.cvs".format(sys.argv[1]), 'w', newline="") as f:
-        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
+    print(listed_items)
+    with open("{}.cvs".format(sys.argv[1]), 'w', encode="utf-8") as f:
+        writer = csv.writer(f, delimiter=',',
+                            quotechar='"', quoting=csv.QUOTE_ALL)
         for row in listed_items:
             writer.writerow(row)
