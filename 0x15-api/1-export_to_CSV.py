@@ -23,7 +23,7 @@ if __name__ == "__main__":
              item.get("title")]
         )
 
-    with open("USER_ID.csv", "w") as f:
+    with open(sys.argv[1] + ".cvs", "w") as f:
         writer = csv.writer(f, quotechar="\"", quoting=csv.QUOTE_ALL)
         for row in listed_items:
             writer.writerow(row)
