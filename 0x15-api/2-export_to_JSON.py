@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" export data in the CSV format """
-import csv
+""" export data in the JSON format."""
+import json
 import requests
 import sys
 
@@ -17,13 +17,11 @@ if __name__ == "__main__":
     listed_items = []
     for item in tasks:
         listed_items.append(
-            [sys.argv[1],
-             username,
-             item.get("completed"),
-             item.get("title")]
+            {'task': item.get('title'),
+             'completed': item.get('completed'),
+             'username': username,
+             }
         )
 
-    with open(sys.argv[1] + ".cvs", "w") as f:
-        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
-        for row in listed_items:
-            writer.writerow(row)
+    with open(sys.argv[1] + ".json", "w") as f:
+        json.dump({str(sys.argv[1]): listed_items}, f)
