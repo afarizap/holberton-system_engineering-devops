@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" using this REST API, for a given employee ID, returns information about his/her """
+""" using this REST API"""
 import requests
 import sys
 
@@ -9,7 +9,8 @@ if __name__ == "__main__":
     path = "users/" + sys.argv[1]
 
     json_response = requests.get(host + path).json()
-    print("Employee {} is done with tasks".format(json_response.get('name')), end="")
+    print("Employee {} is done with tasks"
+          .format(json_response.get('name')), end="")
 
     query = "todos?userId=" + sys.argv[1]
     json_response = requests.get(host + query).json()
